@@ -1,0 +1,88 @@
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:gravity="center_horizontal"
+	    android:orientation="vertical"
+	    tools:context=".MainActivity" >
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:baselineAlignedChildIndex="0"
+	        android:orientation="horizontal">
+			<ImageView
+			    android:id="@+id/iv_profile_image"
+			    android:layout_width="100dp"
+			    android:layout_height="100dp"
+			    android:layout_margin="5dp"
+			    android:scaleType="centerInside"
+			    android:contentDescription="@null" />
+	<!-- 		<com.facebook.widget.ProfilePictureView -->
+	<!-- 		    android:id="@+id/iv_profile_image" -->
+	<!-- 		    android:layout_width="100dp" -->
+	<!-- 		    android:layout_height="100dp" -->
+	<!-- 		    android:layout_margin="5dp" -->
+	<!-- 		    android:scaleType="centerInside" /> -->
+			    
+			
+		    <TextView
+		        android:id="@+id/tv_text"
+		        android:layout_marginLeft="10dp"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:text="@string/hello_world" />
+		</LinearLayout>
+	    <Button 
+	        android:id="@+id/btn_facebook_auth"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp"
+	        android:text="로그인"/>
+	    
+	    <Button 
+	        android:id="@+id/btn_facebook_at"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp"
+	        android:text="로그인_AT"/>
+	    
+	    <Button 
+	        android:id="@+id/btn_facebook_with_permission"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp"
+	        android:text="로그인_permission"/>
+	    
+	    <Button 
+	        android:id="@+id/btn_facebook_like"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp"
+	        android:text="좋아요"/>
+	    
+	    <Button 
+	        android:id="@+id/btn_facebook_invite"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp"
+	        android:text="친구초대"/>
+	    
+	    <Button 
+	        android:id="@+id/btn_facebook_publish"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp"
+	        android:text="Publish"/>
+	    
+	
+	</LinearLayout>
+</ScrollView>

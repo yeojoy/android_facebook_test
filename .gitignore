@@ -1,0 +1,18 @@
+# DIR
+
+bin/
+gen/
+.settings/
+
+#FILES
+
+AndroidManifest.xml
+ant.properties
+build.xml
+custom_build.xml
+local.properties
+proguard-project.txt
+
+res/values/strings.xml
+libs/android-support-v4.jar
+
