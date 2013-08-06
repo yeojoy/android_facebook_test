@@ -7,6 +7,7 @@ import com.facebook.FacebookOperationCanceledException;
 import com.facebook.HttpMethod;
 import com.facebook.Request;
 import com.facebook.Request.GraphUserCallback;
+import com.facebook.RequestAsyncTask;
 import com.facebook.Response;
 import com.facebook.Session;
 import com.facebook.Session.OpenRequest;
@@ -341,24 +342,47 @@ public class MainActivity extends Activity {
             return;
         }
         
+        // 새로운 로직
         Session session = Session.getActiveSession();
         if (session.isOpened() && mUser != null) {
-            
-            // me/og.likes
             Bundle params = new Bundle();
-            params.putString("object", "http://yeojoy.tistory.com/18");
+            params.putString("name", "ANT 스크립트");
+            params.putString("caption", "ant를 사용한 android build script");
+            params.putString("descriptions", "이것만 좀 따라하면 아주 그냥 편하게는 아니더라도...");
+            params.putString("link", "http://yeojoy.tistory.com/18");
             
-            Request request = new Request(session, "me/og.likes", params, HttpMethod.POST);
-            request.setCallback(new Request.Callback() {
+            Request req = new Request(session, "me/likes", params, HttpMethod.POST);
+            req.setCallback(new Request.Callback() {
                 
                 @Override
                 public void onCompleted(Response response) {
-                    MyLog.d(response.toString());
+                    MyLog.i(response.toString());
                 }
             });
-            request.executeAsync();
-            
+            req.executeAsync();
         }
+        
+        // 새로운 로직 끝
+        
+        // 기본 로직. object를 뭔가 만들어 줘야 하는 것 같음.
+//        Session session = Session.getActiveSession();
+//        if (session.isOpened() && mUser != null) {
+//            
+//            // me/og.likes
+//            Bundle params = new Bundle();
+//            params.putString("object", "http://yeojoy.tistory.com/18");
+//            
+//            Request request = new Request(session, "me/og.likes", params, HttpMethod.POST);
+//            request.setCallback(new Request.Callback() {
+//                
+//                @Override
+//                public void onCompleted(Response response) {
+//                    MyLog.d(response.toString());
+//                }
+//            });
+//            request.executeAsync();
+//            
+//        }
     }
     
     private void postFeedTopic() {
